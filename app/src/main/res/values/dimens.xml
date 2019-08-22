@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="small_margin_padding">5dp</dimen>
+    <dimen name="recycler_view_item_height">300dp</dimen>
+    <dimen name="big_margin_padding">10dp</dimen>
+    <dimen name="width_height_40_dp">40dp</dimen>
+    <dimen name="width_height_30_dp">30dp</dimen>
+    <dimen name="text_size_25_sp">25sp</dimen>
+    <dimen name="text_size_30_sp">30sp</dimen>
+    <dimen name="text_size_20_sp">20sp</dimen>
+</resources>

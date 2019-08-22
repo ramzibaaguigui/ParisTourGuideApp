@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/big_margin_padding"
+    app:cardCornerRadius="@dimen/big_margin_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recycler_view_item_height">
+
+            <ImageView
+                android:id="@+id/item_main_image_view"
+                style="@style/ItemMainImageViewStyle"
+                tools:src="@drawable/ic_restaurant" />
+
+            <LinearLayout
+                style="@style/ItemAttributeViewGroupStyle"
+                android:id="@+id/rating_view_group">
+
+                <TextView
+                    android:id="@+id/rating_text_view"
+                    style="@style/ItemAttributeTextViewStyle"
+                    tools:text="4.5/5" />
+
+                <ImageView
+                    style="@style/ItemAttributeImageViewStyle"
+                    android:src="@drawable/ic_star" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/visits_view_group"
+                style="@style/ItemAttributeViewGroupStyle"
+                android:layout_below="@id/rating_view_group">
+
+                <TextView
+                    android:id="@+id/visits_text_view"
+                    style="@style/ItemAttributeTextViewStyle"
+                    tools:text="458" />
+
+                <ImageView
+                    style="@style/ItemAttributeImageViewStyle"
+                    android:src="@drawable/ic_visits" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/ItemAttributeViewGroupStyle"
+                android:id="@+id/phone_view_group"
+                android:visibility="gone"
+                android:layout_below="@id/visits_view_group">
+
+                <TextView
+                    android:id="@+id/phone_text_view"
+                    style="@style/ItemAttributeTextViewStyle"
+                    tools:text="+21365785124" />
+
+                <ImageView
+                    style="@style/ItemAttributeImageViewStyle"
+                    android:src="@drawable/ic_phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/area_view_group"
+                android:layout_below="@id/visits_view_group"
+                style="@style/ItemAttributeViewGroupStyle">
+
+                <TextView
+                    android:id="@+id/area_text_view"
+                    style="@style/ItemAttributeTextViewStyle"
+                    tools:text="425m²" />
+
+                <ImageView
+                    style="@style/ItemAttributeImageViewStyle"
+                    android:src="@drawable/ic_area" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/built_since_view_group"
+                android:layout_below="@id/visits_view_group"
+                android:visibility="gone"
+                style="@style/ItemAttributeViewGroupStyle">
+
+                <TextView
+                    android:id="@+id/built_since_text_view"
+                    style="@style/ItemAttributeTextViewStyle"
+                    tools:text="1978" />
+
+                <ImageView
+                    style="@style/ItemAttributeImageViewStyle"
+                    android:src="@drawable/ic_built_since" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_name_text_view"
+                    style="@style/ItemNameTextViewStyle"
+                    tools:text="Restaurant Name" />
+
+                <LinearLayout
+                    android:layout_margin="@dimen/small_margin_padding"
+                    android:padding="@dimen/small_margin_padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView style="@style/ItemLocationImageViewStyle" />
+
+                    <TextView
+                        style="@style/ItemLocationTextViewStyle"
+                        android:id="@+id/item_location_text_view"
+                        tools:text="The location address will be shown here..." />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View style="@style/VerticalDividerViewStyle" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:padding="@dimen/big_margin_padding"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/item_type_text_view"
+                    style="@style/ItemTypeTextViewStyle"
+                    tools:text="Restaurant" />
+
+                <ImageView
+                    android:id="@+id/item_type_image_view"
+                    style="@style/ItemTypeImageViewStyle"
+                    tools:src="@drawable/ic_restaurant" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
